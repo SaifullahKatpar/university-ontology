@@ -127,7 +127,8 @@
 
 ###  https://github.com/damorton/university.owl#Student2
 <https://github.com/damorton/university.owl#Student2> rdf:type owl:NamedIndividual ;
-                                                      <https://github.com/damorton/university.owl#studies> <https://github.com/damorton/university.owl#cs101> ;
+                                                      <https://github.com/damorton/university.owl#studies> <https://github.com/damorton/university.owl#cs103> ,
+                                                                                                           <https://github.com/damorton/university.owl#m201> ;
                                                       <https://github.com/damorton/university.owl#firstName> "Becca"^^xsd:string ;
                                                       <https://github.com/damorton/university.owl#lastName> "Maxwell"^^xsd:string ;
                                                       <https://github.com/damorton/university.owl#studentId> 777777 .
