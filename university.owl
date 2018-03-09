@@ -103,7 +103,7 @@
                     :Lecturer ;
            :teaches :CS103 ,
                     :M201 ;
-           :firstName "Larisa"^^xsd:string ;
+           :firstName "Kay"^^xsd:string ;
            :lastName "McDonald"^^xsd:string ;
            :staffId 273912 .
 
@@ -141,7 +141,7 @@
 :Student2 rdf:type owl:NamedIndividual ,
                    :Student ;
           :studies :M201 ;
-          :firstName "Emma"^^xsd:string ;
+          :firstName "Claire"^^xsd:string ;
           :lastName "Watson"^^xsd:string ;
           :studentId 4321 .
 

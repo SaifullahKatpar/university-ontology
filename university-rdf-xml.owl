@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#"
+     xml:base="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#studies -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#studies">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Student"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#teaches -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#teaches">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Lecturer"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#firstName -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#firstName">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#lastName -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#lastName">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#staffId -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#staffId">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#studentId -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#studentId">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#CSModule -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#CSModule">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Lecturer -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Lecturer">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#MathModule -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#MathModule">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Module -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Module"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Person -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Person"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Student -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Student">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#CS101 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#CS101">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#CSModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#CS103 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#CS103">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#CSModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Lecturer1 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Lecturer1">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Lecturer"/>
+        <teaches rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#CS103"/>
+        <teaches rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#M201"/>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kay</firstName>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McDonald</lastName>
+        <staffId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">273912</staffId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Lecturer2 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Lecturer2">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Lecturer"/>
+        <teaches rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#CS101"/>
+        <teaches rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#M204"/>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom</firstName>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryan</lastName>
+        <staffId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">238901</staffId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#M201 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#M201">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#MathModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#M204 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#M204">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#MathModule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Student1 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Student1">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Student"/>
+        <studies rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#CS101"/>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David</firstName>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morton</lastName>
+        <studentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1234</studentId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Student2 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Student2">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Student"/>
+        <studies rdf:resource="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#M201"/>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Claire</firstName>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Watson</lastName>
+        <studentId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4321</studentId>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#CSModule"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Lecturer"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#MathModule"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Student"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
