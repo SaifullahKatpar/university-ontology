@@ -1,4 +1,4 @@
-@prefix : <http://www.semanticweb.org/dmorton/ontologies/2018/0/untitled-ontology-4#> .
+@prefix : <https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -12,146 +12,138 @@
 #    Object Properties
 #################################################################
 
-###  https://github.com/damorton/university.owl#studies
-<https://github.com/damorton/university.owl#studies> rdf:type owl:ObjectProperty ;
-                                                     rdfs:subPropertyOf owl:topObjectProperty ;
-                                                     rdfs:domain <https://github.com/damorton/university.owl#Student> ;
-                                                     rdfs:range <https://github.com/damorton/university.owl#Module> .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#studies
+:studies rdf:type owl:ObjectProperty ;
+         rdfs:domain :Student ;
+         rdfs:range :Module .
 
 
-###  https://github.com/damorton/university.owl#teaches
-<https://github.com/damorton/university.owl#teaches> rdf:type owl:ObjectProperty ;
-                                                     rdfs:subPropertyOf owl:topObjectProperty ;
-                                                     rdfs:domain <https://github.com/damorton/university.owl#Lecturer> ;
-                                                     rdfs:range <https://github.com/damorton/university.owl#Module> .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#teaches
+:teaches rdf:type owl:ObjectProperty ;
+         rdfs:domain :Lecturer ;
+         rdfs:range :Module .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  https://github.com/damorton/university.owl#firstName
-<https://github.com/damorton/university.owl#firstName> rdf:type owl:DatatypeProperty ;
-                                                       rdfs:subPropertyOf owl:topDataProperty ;
-                                                       rdfs:domain <https://github.com/damorton/university.owl#Person> ;
-                                                       rdfs:range xsd:string .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#firstName
+:firstName rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Person ;
+           rdfs:range xsd:string .
 
 
-###  https://github.com/damorton/university.owl#lastName
-<https://github.com/damorton/university.owl#lastName> rdf:type owl:DatatypeProperty ;
-                                                      rdfs:subPropertyOf owl:topDataProperty ;
-                                                      rdfs:domain <https://github.com/damorton/university.owl#Person> ;
-                                                      rdfs:range xsd:string .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#lastName
+:lastName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Person ;
+          rdfs:range xsd:string .
 
 
-###  https://github.com/damorton/university.owl#staffId
-<https://github.com/damorton/university.owl#staffId> rdf:type owl:DatatypeProperty ;
-                                                     rdfs:subPropertyOf owl:topDataProperty ;
-                                                     rdfs:domain <https://github.com/damorton/university.owl#Lecturer> ;
-                                                     rdfs:range xsd:integer .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#staffId
+:staffId rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Lecturer ;
+         rdfs:range xsd:integer .
 
 
-###  https://github.com/damorton/university.owl#studentId
-<https://github.com/damorton/university.owl#studentId> rdf:type owl:DatatypeProperty ;
-                                                       rdfs:subPropertyOf owl:topDataProperty ;
-                                                       rdfs:domain <https://github.com/damorton/university.owl#Student> ;
-                                                       rdfs:range xsd:integer .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#studentId
+:studentId rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Student ;
+           rdfs:range xsd:integer .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  https://github.com/damorton/university.owl#CSModule
-<https://github.com/damorton/university.owl#CSModule> rdf:type owl:Class ;
-                                                      rdfs:subClassOf <https://github.com/damorton/university.owl#Module> ;
-                                                      owl:disjointWith <https://github.com/damorton/university.owl#MathModule> .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#CSModule
+:CSModule rdf:type owl:Class ;
+          rdfs:subClassOf :Module .
 
 
-###  https://github.com/damorton/university.owl#Lecturer
-<https://github.com/damorton/university.owl#Lecturer> rdf:type owl:Class ;
-                                                      rdfs:subClassOf <https://github.com/damorton/university.owl#Person> ;
-                                                      owl:disjointWith <https://github.com/damorton/university.owl#Student> .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Lecturer
+:Lecturer rdf:type owl:Class ;
+          rdfs:subClassOf :Person .
 
 
-###  https://github.com/damorton/university.owl#MathModule
-<https://github.com/damorton/university.owl#MathModule> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <https://github.com/damorton/university.owl#Module> .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#MathModule
+:MathModule rdf:type owl:Class ;
+            rdfs:subClassOf :Module .
 
 
-###  https://github.com/damorton/university.owl#Module
-<https://github.com/damorton/university.owl#Module> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Module
+:Module rdf:type owl:Class .
 
 
-###  https://github.com/damorton/university.owl#Person
-<https://github.com/damorton/university.owl#Person> rdf:type owl:Class .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Person
+:Person rdf:type owl:Class .
 
 
-###  https://github.com/damorton/university.owl#Student
-<https://github.com/damorton/university.owl#Student> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <https://github.com/damorton/university.owl#Person> .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Student
+:Student rdf:type owl:Class ;
+         rdfs:subClassOf :Person .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  https://github.com/damorton/university.owl#Lecturer1
-<https://github.com/damorton/university.owl#Lecturer1> rdf:type owl:NamedIndividual ,
-                                                                <https://github.com/damorton/university.owl#Lecturer> ;
-                                                       <https://github.com/damorton/university.owl#teaches> <https://github.com/damorton/university.owl#cs101> ,
-                                                                                                            <https://github.com/damorton/university.owl#m201> ;
-                                                       <https://github.com/damorton/university.owl#firstName> "Tony"^^xsd:string ;
-                                                       <https://github.com/damorton/university.owl#lastName> "Veale"^^xsd:string ;
-                                                       <https://github.com/damorton/university.owl#staffId> 123456 .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#CS101
+:CS101 rdf:type owl:NamedIndividual ,
+                :CSModule .
 
 
-###  https://github.com/damorton/university.owl#Lecturer2
-<https://github.com/damorton/university.owl#Lecturer2> rdf:type owl:NamedIndividual ,
-                                                                <https://github.com/damorton/university.owl#Lecturer> ;
-                                                       <https://github.com/damorton/university.owl#teaches> <https://github.com/damorton/university.owl#cs103> ,
-                                                                                                            <https://github.com/damorton/university.owl#m204> ;
-                                                       <https://github.com/damorton/university.owl#firstName> "Keith"^^xsd:string ;
-                                                       <https://github.com/damorton/university.owl#lastName> "Barry"^^xsd:string ;
-                                                       <https://github.com/damorton/university.owl#staffId> 86457 .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#CS103
+:CS103 rdf:type owl:NamedIndividual ,
+                :CSModule .
 
 
-###  https://github.com/damorton/university.owl#Student1
-<https://github.com/damorton/university.owl#Student1> rdf:type owl:NamedIndividual ;
-                                                      <https://github.com/damorton/university.owl#studies> <https://github.com/damorton/university.owl#cs101> ,
-                                                                                                           <https://github.com/damorton/university.owl#m204> ;
-                                                      <https://github.com/damorton/university.owl#firstName> "David"^^xsd:string ;
-                                                      <https://github.com/damorton/university.owl#lastName> "Morton"^^xsd:string ;
-                                                      <https://github.com/damorton/university.owl#studentId> 464326 .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Lecturer1
+:Lecturer1 rdf:type owl:NamedIndividual ,
+                    :Lecturer ;
+           :teaches :CS103 ,
+                    :M201 ;
+           :firstName "Larisa"^^xsd:string ;
+           :lastName "McDonald"^^xsd:string ;
+           :staffId 273912 .
 
 
-###  https://github.com/damorton/university.owl#Student2
-<https://github.com/damorton/university.owl#Student2> rdf:type owl:NamedIndividual ;
-                                                      <https://github.com/damorton/university.owl#studies> <https://github.com/damorton/university.owl#cs103> ,
-                                                                                                           <https://github.com/damorton/university.owl#m201> ;
-                                                      <https://github.com/damorton/university.owl#firstName> "Becca"^^xsd:string ;
-                                                      <https://github.com/damorton/university.owl#lastName> "Maxwell"^^xsd:string ;
-                                                      <https://github.com/damorton/university.owl#studentId> 777777 .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Lecturer2
+:Lecturer2 rdf:type owl:NamedIndividual ,
+                    :Lecturer ;
+           :teaches :CS101 ,
+                    :M204 ;
+           :firstName "Tom"^^xsd:string ;
+           :lastName "Ryan"^^xsd:string ;
+           :staffId 238901 .
 
 
-###  https://github.com/damorton/university.owl#cs101
-<https://github.com/damorton/university.owl#cs101> rdf:type owl:NamedIndividual ,
-                                                            <https://github.com/damorton/university.owl#CSModule> .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#M201
+:M201 rdf:type owl:NamedIndividual ,
+               :MathModule .
 
 
-###  https://github.com/damorton/university.owl#cs103
-<https://github.com/damorton/university.owl#cs103> rdf:type owl:NamedIndividual ,
-                                                            <https://github.com/damorton/university.owl#CSModule> .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#M204
+:M204 rdf:type owl:NamedIndividual ,
+               :MathModule .
 
 
-###  https://github.com/damorton/university.owl#m201
-<https://github.com/damorton/university.owl#m201> rdf:type owl:NamedIndividual ,
-                                                           <https://github.com/damorton/university.owl#MathModule> .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Student1
+:Student1 rdf:type owl:NamedIndividual ,
+                   :Student ;
+          :studies :CS101 ;
+          :firstName "David"^^xsd:string ;
+          :lastName "Morton"^^xsd:string ;
+          :studentId 1234 .
 
 
-###  https://github.com/damorton/university.owl#m204
-<https://github.com/damorton/university.owl#m204> rdf:type owl:NamedIndividual ,
-                                                           <https://github.com/damorton/university.owl#MathModule> .
+###  https://raw.githubusercontent.com/damorton/university-ontology/master/university.owl#Student2
+:Student2 rdf:type owl:NamedIndividual ,
+                   :Student ;
+          :studies :M201 ;
+          :firstName "Emma"^^xsd:string ;
+          :lastName "Watson"^^xsd:string ;
+          :studentId 4321 .
 
 
 #################################################################
@@ -159,17 +151,10 @@
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <https://github.com/damorton/university.owl#CSModule>
-                <https://github.com/damorton/university.owl#Lecturer>
-                <https://github.com/damorton/university.owl#Student>
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <https://github.com/damorton/university.owl#Lecturer>
-                <https://github.com/damorton/university.owl#MathModule>
-                <https://github.com/damorton/university.owl#Student>
+  owl:members ( :CSModule
+                :Lecturer
+                :MathModule
+                :Student
               )
 ] .
 
